@@ -1,0 +1,50 @@
+[
+  {
+    id: 1,
+    name: "Green key",
+    sprite: "Q",
+    position: { x: 0, y: 0 }
+  },
+  {
+    id: 1,
+    name: "Yellow key",
+    sprite: "R",
+    position: { x: 1, y: 0 }
+  },
+  {
+    id: 1,
+    name: "Red key",
+    sprite: "S",
+    position: { x: 2, y: 0 }
+  },
+  {
+    id: 1,
+    name: "Blue key",
+    sprite: "T",
+    position: { x: 3, y: 0 }
+  },
+  {
+    id: 1,
+    name: "Fire boot",
+    sprite: "N",
+    position: { x: 0, y: 1 }
+  },
+  {
+    id: 1,
+    name: "Flippers",
+    sprite: "X",
+    position: { x: 1, y: 1 }
+  },
+  {
+    id: 1,
+    name: "Magnetic boot",
+    sprite: "b",
+    position: { x: 2, y: 1 }
+  },
+  {
+    id: 1,
+    name: "Spikes",
+    sprite: "e",
+    position: { x: 3, y: 1 }
+  },
+]

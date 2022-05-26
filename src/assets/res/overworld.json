@@ -1,0 +1,211 @@
+[
+	{
+		"COMMENT": "Starting room",
+		"row": 5,
+		"col": 8,
+		"tiles": [
+			"???????::???????",
+			"???????::???????",
+			"????0?@::???????",
+			"???@:::::???????",
+			"??@::::::>??????",
+			"?@::::::::::::::",
+			":::::::::::::<<<",
+			"<=:::::::::::???",
+			"??:::::::::::???",
+			"??<<<<<<<<<<<???",
+			"????????????????"
+		]
+	},
+	{
+		"row": 5,
+		"col": 7,
+		"tiles": [
+			"????????????????",
+			"????????????????",
+			"?????@::s::::>??",
+			"?@::::::::::::??",
+			"?:::::OPPQ::p:??",
+			"?:s::pSSSS::::>?",
+			"?=::::RSST:ps:::",
+			"???=::::::::s:;<",
+			"????=:p:::::::??",
+			"?????<<<<<<<<<??",
+			"????????????????"
+		]
+	},
+	{
+		"row": 4,
+		"col": 8,
+		"mobs": [[10,4,0,2], [13,2,1,1], [6,6,1,1]],
+		"tiles": [
+			"????????@::>????",
+			"??@:::V:::::>???",
+			"??::::::B:::::::",
+			"??:B:B:::V::::;<",
+			"?@::::::::::V:??",
+			"::::::V::B::::??",
+			":::V::::::::B:??",
+			"<=:::B::::V:::??",
+			"??:::::::;<<<<??",
+			"??<<<<=::???????",
+			"???????::???????"
+		]
+	},
+	{
+		"COMMENT": "Level 2",
+		"row": 4,
+	  "col": 7,
+	  "tiles": [
+	    "????????????????",
+	    "???????????:>???",
+	    "???@::>???@::>??",
+	    "???::B::::::::??",
+	    "??@::::::::V::>?",
+	    ":::::::B::::::::",
+	    "::::::::::::B:::",
+	    "<=:::V::::::::;<",
+	    "??<=:::::;<<<<??",
+	    "????=::;<???????",
+	    "????????????????"
+    ]
+  },
+	{
+		"row": 5,
+		"col": 9,
+		"tiles": [
+			"??@::::::yzzzzzz",
+			"?@:::::::yzzzzzz",
+			"?::XZ::::yzzzzzz",
+			"?::bd::::yzzzzzz",
+			"@::::::::yzzzzzz",
+			":::::::::NNNNNNN",
+			"<::::XZ::yzzzzzz",
+			"?::::bd::yzzzzzz",
+			"?=:::::::yzzzzzz",
+			"??<<<=::;zzzzzzz",
+			"??????<<?zzzzzzz"
+		]
+	},
+	{
+		"row": 5,
+		"col": 10,
+		"tiles": [
+			"zzzzzzzzzzzzzzzz",
+			"zzzz5:V::::p:6zz",
+			"zzz~::::XYZ:::zz",
+			"zz5:p:::b0d:Vpzz",
+			"zz::2sp:::::V:zz",
+			"NNN::::::p::::zz",
+			"zz::2:::::Vs::zz",
+			"zz7p:::V:s:::8zz",
+			"zzzzzz7p::8zzzzz",
+			"zzzzzzzzzzzzzzzz",
+			"zzzzzzzzzzzzzzzz"
+		]
+	},
+	{
+		"row": 4,
+		"col": 5,
+		"tiles": [
+			"IDDDDDDDDDDDDDDI",
+			"IDDDDDDDDDDDDDDI",
+			"IDD1DD1DD1DD1DDI",
+			"IDDDDDDDDDDDDDDI",
+			"IDD1DD1DD1DD1DDI",
+			"IDDDDDDDDDDDDDDI",
+			"IDD1DD1DD1DD1DDD",
+			"IDDDDDDDDDDDDDDF",
+			"IGDDDDDDDDDDDDEI",
+			"IIFFFFFFFFFFFFII",
+			"IIIIIIIIIIIIIIII"
+		]
+	},
+	{
+		"row": 4,
+		"col": 6,
+		"tiles": [
+			"SSSSSSSS4SSSSSSS",
+			"SSSSSSSS4SSSSSSS",
+			"ST::::::z::::RSS",
+			"S:::vwwwzwx:::RS",
+			"S:::yzzzzz{::::R",
+			"T:::|}z}}}~:::::",
+			"::::::z:::::::::",
+			"PPQ:::N:::::::OP",
+			"SSSPPP4PPPPPiPSS",
+			"SSSSSS4SSSSSiSSS",
+			"SSSSSS4SSSSSiSSS"
+		]
+	},
+	{
+		"COMMENT": "River basic shop",
+		"row": 5,
+		"col": 6,
+		"tiles": [
+			"SSSSSS4SSSSSiSSS",
+			"SSSSSS4SSSSSiSSS",
+			"ST:B::z:RS0T:RSS",
+			"S::::8z:::::: RS",
+			"S:::vz~::::::::S",
+			"T:::y{:::::::::S",
+			"::::NN:::::::::S",
+			"PPQ:y{::BB:B:OPS",
+			"SSSQy{OPPPPPPSSS",
+			"SSSSy{SSSSSSSSSS",
+			"SSSSy{SSSSSSSSSS"
+		]
+	},
+	{
+		"row": 3,
+		"col": 5,
+		"tiles": [
+			"IIIIIIIIIIIIIIII",
+			"IJDDDDDDDDDDDDHI",
+			"IDDDDDD^_`DDDDDI",
+			"IDDDD3Dh0jD3DDDI",
+			"IDDDDDDDDDDDDDDI",
+			"IDD1DD1DD1DD1DDI",
+			"IDDDDDDDDDDDDDDI",
+			"IDD1DD1DD1DD1DDI",
+			"IDDDDDDDDDDDDDDI",
+			"IDD1DD1DD1DD1DDI",
+			"IDDDDDDDDDDDDDDI"
+		]
+	},
+	{
+		"COMMENT": "Waterfall lake",
+		"row": 3,
+		"col": 6,
+		"tiles": [
+			"SSSSSSSSSSSSSSSS",
+			"SSSSSSSSSSSSSSSS",
+			"SSST::::::::::RS",
+			"ST:::vwwwwwx::::",
+			"S::::yzzzzz{::::",
+			"SQ:::yzzzzz{::OP",
+			"SS:::|}z}}}~::SS",
+			"SS:::::z::::::SS",
+			"SSQ::::z:::::OSS",
+			"SSSPPPP4PPPPSSSS",
+			"SSSSSSS4SSSSSSSS"
+		]
+	},
+	{
+		"row": 5,
+		"col": 5,
+		"tiles": [
+			"SSSSSSSSSSSSSSSS",
+			"SSSSSSSSSST:RSSS",
+			"ST::RS0ST::::RSS",
+			"S:::::::::XZ::SS",
+			"S:XZ::::::bd::SS",
+			"S:bd:::B::::::RS",
+			"S:::::::::::B:::",
+			"SQ::B:XZ::::::OP",
+			"SS::::bd::OPPPSS",
+			"SSPPQ:::OPSSSSSS",
+			"SSSSSPPPSSSSSSSS"
+		]
+	}
+]

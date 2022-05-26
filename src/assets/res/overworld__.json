@@ -1,0 +1,364 @@
+{
+  "width": 16,
+  "height": 8,
+  "rooms": [
+    {
+      "id": 51,
+      "name": "Overworld start",
+      "tiles": [
+        "????????::???????",
+        "????????::???????",
+        "?????0?@::???????",
+        "????@:::::???????",
+        "???@::::::>??????",
+        "??@::::::::::::::",
+        "::::::::::::::<<<",
+        "<<=:::::::::::???",
+        "???:::::::::::???",
+        "???<<<<<<<<<<<???",
+        "?????????????????"
+      ]
+    },
+    {
+      "id": 50,
+      "name": "Level 9",
+      "tiles": [
+        "?????????????????",
+        "?????????????????",
+        "??????@::s::::>??",
+        "??@::::::::::::??",
+        "??:::::OPPQ::p:??",
+        "??:s::pSSSS::::>?",
+        "??=::::RSST:ps:::",
+        "????=::::::::s:;<",
+        "?????=:p:::::::??",
+        "??????<<<<<<<<<??",
+        "?????????????????"
+      ]
+    },
+    {
+      "id": 16,
+      "name": "Cemetery Level 6",
+      "tiles": [
+        "IIIIIIIIIIIIIIIII",
+        "IJDDDDDDDDDDDDDHI",
+        "IDDDDDD^_`DDDDDDI",
+        "IDDDD3Dh0jD3DDDDI",
+        "IDDDDDDDDDDDDDDDI",
+        "IDD1DD1DDD1DD1DDI",
+        "IDDDDDDDDDDDDDDDI",
+        "IDD1DD1DDD1DD1DDI",
+        "IDDDDDDDDDDDDDDDI",
+        "IDD1DD1DDD1DD1DDI",
+        "IDDDDDDDDDDDDDDDI"
+      ]
+    },
+    {
+      "id": 32,
+      "name": "Cemetery",
+      "tiles": [
+        "IDDDDDDDDDDDDDDDI",
+        "IDDDDDDDDDDDDDDDI",
+        "IDD1DD1DDD1DD1DDI",
+        "IDDDDDDDDDDDDDDDI",
+        "IDD1DD1DDD1DD1DDI",
+        "IDDDDDDDDDDDDDDDI",
+        "IDD1DD1DDD1DD1DDD",
+        "IDDDDDDDDDDDDDDDF",
+        "IGDDDDDDDDDDDDDEI",
+        "IIFFFFFFFFFFFFIII",
+        "IIIIIIIIIIIIIIIII"
+      ]
+    },
+    {
+      "id": 17,
+      "name": "Waterfall lake",
+      "tiles": [
+        "SSSSSSSSSSSSSSSSS",
+        "SSSSSSSSSSSSSSSSS",
+        "SSST:::::::::::RS",
+        "ST:::vwwwwwx:::::",
+        "S::::yzzzzz{:::::",
+        "SQ:::yzzzzz{:::OP",
+        "SS:::|}z}}}~:::SS",
+        "SS:::::z:::::::SS",
+        "SSQ::::z::::::OSS",
+        "SSSPPPP4PPPPPSSSS",
+        "SSSSSSS4SSSSSSSSS"
+      ]
+    },
+    {
+      "id": 33,
+      "name": "River to cemetery",
+      "tiles": [
+        "SSSSSSSS4SSSSSSSS",
+        "SSSSSSSS4SSSSSSSS",
+        "ST::::::z::::RSSS",
+        "S:::vwwwzwx:::RSS",
+        "S:::yzzzzz{::::RS",
+        "T:::|}z}}}~::::::",
+        "::::::z::::::::::",
+        "PPQ:::N:::::::OPP",
+        "SSSPPP4PPPPPiPSSS",
+        "SSSSSS4SSSSSiSSSS",
+        "SSSSSS4SSSSSiSSSS"
+      ]
+    },
+    {
+      "id": 49,
+      "name": "River bridge basic shop",
+      "tiles": [
+        "SSSSSS4SSSSSiSSSS",
+        "SSSSSS4SSSSSiSSSS",
+        "ST:B::z:RS0T:RSSS",
+        "S::::8z:::::::RSS",
+        "S:::vz~::::::::SS",
+        "T:::y{:::::::::SS",
+        "::::NN:::::::::SS",
+        "SSQ:y{:::BB:B:OSS",
+        "SSSQy{OPPPPPPPSSS",
+        "SSSSy{SSSSSSSSSSS",
+        "SSSSy{SSSSSSSSSSS"
+      ]
+    },
+    {
+      "id": 35,
+      "name": "Level 5",
+      "tiles": [
+        "?????????@::>????",
+        "???@:::V:::::>???",
+        "???::::::B:::::::",
+        "???:B:B:::V::::;<",
+        "??@::::::::::V:??",
+        ":::::::V::B::::??",
+        "::::V::::::::B:??",
+        "<=::::B::::V:::??",
+        "??::::::::;<<<<??",
+        "??<<<<<=::???????",
+        "????????::???????"
+      ],
+      "mobs": [[10,4,0,2], [13,2,1,1], [6,6,1,1]]
+    },
+    {
+      "id": 34,
+      "name": "Level 2",
+      "tiles": [
+        "?????????????????",
+        "????????????:>???",
+        "???@:::>???@::>??",
+        "???::B:::::::::??",
+        "??@:::::::::V::>?",
+        ":::::::B:::::::::",
+        ":::::::::::::B:::",
+        "<=:::V:::::::::;<",
+        "??<=::::::;<<<<??",
+        "????=:::;<???????",
+        "?????????????????"
+      ]
+    },
+    {
+      "id": 48,
+      "name": "Level 4",
+      "tiles": [
+        "SSSSSSSSSSSSSSSSS",
+        "SSSSSSSSSSST:RSSS",
+        "ST::RS0ST:::::RSS",
+        "S::::::::::XZ::SS",
+        "S:XZ:::::::bd::SS",
+        "S:bd::::B::::::RS",
+        "S::::::::::::B:::",
+        "SQ::B:XZ:::::::OP",
+        "SS::::bd::OPPPPSS",
+        "SSPPQ:::OPSSSSSSS",
+        "SSSSSSSSSSSSSSSSS"
+      ]
+    },
+    {
+      "id": 36,
+      "name": "Shop",
+      "tiles": [
+        "??????????::?????",
+        "?@:::::::::::::::",
+        ":::::XZ::::::::::",
+        "=::::bd::::::::::",
+        "?::::::::vwwwwwww",
+        "?::::::::yzzzzzzz",
+        "?:::XZ:::yzzzzzzz",
+        "?:::bd:::yzzzzzzz",
+        "?=:::::::yzzzzzzz",
+        "??<::::::yzzzzzzz",
+        "???::::::yzzzzzzz"
+      ]
+    },
+    {
+      "id": 52,
+      "name": "",
+      "tiles": [
+        "??@::::::yzzzzzzz",
+        "?@:::::::yzzzzzzz",
+        "?::XZ::::yzzzzzzz",
+        "?::bd::::yzzzzzzz",
+        "@::::::::yzzzzzzz",
+        ":::::::::NNNNNNNN",
+        "<::::XZ::yzzzzzzz",
+        "?::::bd::yzzzzzzz",
+        "?=:::::::yzzzzzzz",
+        "??<<<=::;zzzzzzzz",
+        "??????<<?zzzzzzzz"
+      ]
+    },
+    {
+      "id": 53,
+      "name": "Level 1",
+      "tiles": [
+        "zzzzzzzzzzzzzzzzz",
+        "zzzzz5:V::::p:6zz",
+        "zzzz~::::XYZ:::zz",
+        "zzz5:p:::b0d:Vpzz",
+        "zzz::2sp:::::V:zz",
+        "NNNN::::::p::::zz",
+        "zzz::2:::::Vs::zz",
+        "zzz7p:::V:s:::8zz",
+        "zzzzzzz7p::8zzzzz",
+        "zzzzzzzzzzzzzzzzz",
+        "zzzzzzzzzzzzzzzzz"
+      ]
+    },
+    {
+      "id": 37,
+      "name": "",
+      "tiles": [
+        "?????????????????",
+        ":::>?????@::::>??",
+        "::::::::::::C::??",
+        "::::::::::::::;??",
+        "wwwwwwwwwwwwwwwww",
+        "zzzzzzzzzzzzzzzzz",
+        "zzzzzzzzzzzzzzzzz",
+        "zzzzzzzzzzzzzzzzz",
+        "zzzzzzzzzzzzzzzzz",
+        "zzzzzzzzzzzzzzzzz",
+        "zzzzzzzzzzzzzzzzz"
+      ]
+    },
+    {
+      "id": 18,
+      "name": "Tunnel exit",
+      "tiles": [
+        "SSSSSSSSSSiSSSSSS",
+        "SSSSSSSSSSiSSSSSS",
+        "SSST::::::::SSSSS",
+        ":::::::::::OSSSSS",
+        "::::::OPPPPSSSSSS",
+        "SQ:::OSSSSSSSSSSS",
+        "SS:::RST::::::RSS",
+        "SS:::::::::W:::SS",
+        "SSQ::::::::::OPSS",
+        "SSSPPPPPPPPPPSSSS",
+        "SSSSSSSSSSSSSSSSS"
+      ]
+    },
+    {
+      "id": 21,
+      "name": "Level 7",
+      "tiles": [
+        "SSSSSSSSSSSSSSSSS",
+        "SSSSSSSSSSSSSSSSS",
+        "SSST::::s::ppRSSS",
+        ":pp:::::::::::SSS",
+        ":::::2::2s:2::RSS",
+        "SQ:::::::::::::SS",
+        "SS:::2:p2::2s::SS",
+        "SS::s:::::::::OSS",
+        "SSQ:::s::pp::OSSS",
+        "SSSPPPPPPPPPPSSSS",
+        "SSSSSSSSSSSSSSSSS"
+      ]
+    },
+    {
+      "id": 20,
+      "name": "Level 7",
+      "tiles": [
+        "SSSSSSSS::SSSSSSS",
+        "SSSSSSST::RSSSSSS",
+        "SSST:s:::::pp::RSS",
+        "SSS::::::::::::::",
+        "SST::::s:::::::::",
+        ":::::::::::::::OS",
+        "::::::::p:::s::SS",
+        "SQ::s:::::::::OSS",
+        "SSQ:s::::pp::OSSS",
+        "SSSPPPPPPP::PSSSS",
+        "SSSSSSSSSS::SSSSS"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Level 3",
+      "tiles": [
+        "SSSSSSSSSSSSSSSSS",
+        "SSSSSSSSSSSSSSSSS",
+        "SSST:s:::::ppRSSS",
+        "SST:[]:[f]:[]:RSS",
+        "SS::eg:e0g:eg::::",
+        "SS:::::::::::::::",
+        "SS::::::p:::s::OS",
+        "SS:::s:::::::::SS",
+        "SSQ:s::p:::p::OSS",
+        "SSSPPPPP::PPPSSSS",
+        "SSSSSSSS::SSSSSSS"
+      ]
+    },
+    {
+      "id": 19,
+      "name": "",
+      "tiles": [
+        "???????@::>??????",
+        "??@:>?@::::B:>???",
+        "??::::::::::::>??",
+        "??:B::B::B:B:::??",
+        "?@:::BB:::B::B:>?",
+        "?::B::B::B::B::::",
+        "?:BB:::BB::::::::",
+        "?::B::B::B:::B:;<",
+        "?=::::::::::;<<??",
+        "??<<<<<<<=::?????",
+        "??????????::?????"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "",
+      "tiles": [
+        "?????????????????",
+        "?????????????????",
+        "??@::::::::::::>?",
+        "?@:::vwwwwwx::::?",
+        "?::V:yzzzzz{:V::?",
+        "?::::yzzzzz{::::?",
+        "?::V:|}}}}}~:V::?",
+        "?::::::::::::::;?",
+        "?=::::::::::;<<??",
+        "??<<<<<=::;??????",
+        "????????::???????"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Fancy shop",
+      "tiles": [
+        "IIIIIIIIIIIIIIIII",
+        "IIIIIIIIIIIIIIIII",
+        "IIIJDDDDHIIIIIIII",
+        "IJDDD^`DDHIIIIIII",
+        "DDDDDhjDDDDDDDHII",
+        "DDDDDDDDDDDDLLDII",
+        "IGDDDDDDD^`DDLDII",
+        "IIDDLDDDDhjDDDDII",
+        "IIGDDDLLDDDDDDEII",
+        "IIIIIIIIIIIIIIIII",
+        "IIIIIIIIIIIIIIIII"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+[
+  {
+    id: 0,
+    name: "It's dangerous to go alone!",
+    text: [
+      {x: 112, y: 80, content: ["It's dangerous to go", "  alone! Take this."]},
+      {x: 112, y: 192, content: ["Tutorial"]}
+    ],
+    tiles : [
+      "CCCCCCCCCCCCCCCCC",
+      "CCCCCCCCCCCCCCCCC",
+      "CC0000000000000CC",
+      "CC0000000000000CC",
+      "CC000800B008000CC",
+      "CC0000000000000CC",
+      "CC0000000000000CC",
+      "CC0003000000000CC",
+      "CC0000000000000CC",
+      "CCMMMMMM00MMMMMCC",
+      "CCCCCCCC00CCCCCCC"
+    ]
+  }
+]

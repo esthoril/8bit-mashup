@@ -1,0 +1,32 @@
+{
+  "name": "main_site",
+  "version": "1.0.0",
+  "description": "8bit Mashup",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sander Hendrickx",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.27.5",
+    "del": "^3.0.0",
+    "gulp-clean-css": "^3.9.3",
+    "gulp-concat": "^2.6.1",
+    "gulp-flatmap": "^1.0.2",
+    "gulp-htmlmin": "^4.0.0",
+    "gulp-rev": "^8.1.1",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify": "^3.0.0",
+    "gulp-usemin": "^0.3.29"
+  },
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "bootstrap-social": "^5.1.1",
+    "font-awesome": "^4.7.0",
+    "gulp": "^4.0.2",
+    "jquery": "^3.4.1",
+    "minimatch": "^3.0.4"
+  },
+  "type": "module"
+}

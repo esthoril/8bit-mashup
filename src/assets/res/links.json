@@ -1,0 +1,30 @@
+[
+  {
+    comment: "It's dangerous to go alone",
+    link: [
+      {type: 0, id: 51, xG: 5, yG: 2, dir: 3},
+      {type: 2, id: 0, xG: 8, yG: 10, dir: 2}
+    ]
+  },
+  {
+    comment: "Level 1",
+    link: [
+      {type: 0, id: 53 , xG: 10, yG: 3, dir: 3},
+      {type: 1, id: 1 , xG: 8, yG: 10, dir: 2}
+    ]
+  },
+  {
+    comment: "Passway",
+    link: [
+      {type: 0, id: 37 , xG: 12, yG: 2, dir: 0},
+      {type: 0, id: 18 , xG: 11, yG: 7, dir: 0}
+    ]
+  },
+  {
+    comment: "Level 4",
+    link: [
+      {type: 0, id: 48 , xG: 6, yG: 2, dir: 3},
+      {type: 1, id: 4 , xG: 8, yG: 10, dir: 0}
+    ]
+  }
+]
