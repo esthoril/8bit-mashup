@@ -7,4 +7,4 @@
 
 ---
 
-See [changelog](changelog.md) for current progress
+See [changelog](CHANGELOG.md) for current progress

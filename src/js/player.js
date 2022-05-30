@@ -2,6 +2,8 @@ import Entity from './entity.js';
 
 export default class Player extends Entity
 {
+	SLASH_COUNT = 12;
+
 	constructor(xG, yG, dir)
 	{
 		const SPEED = 160;
@@ -9,24 +11,30 @@ export default class Player extends Entity
 		super(xG, yG, dir, SPEED, ANIM);
 
 		this.img = document.getElementById("link");
-		this.state = IDLE;
+		this.state = STATE.IDLE;
+		this.frameTimer = 0;
 	}
 
 	checkInput(keys, world)
 	{
 		this.animframe = 1;
 		this.moved = 0;
-		this.timePassed = 0;
 
-		// Check if we need to switch room
-		// and if next tile is valid to move to
-		if(keys.isDown(keys.RIGHT)) { this.state = this.movePlayer(DIRS.RIGHT, world); }
-		else if(keys.isDown(keys.LEFT)) { this.state = this.movePlayer(DIRS.LEFT, world); }
-		else if(keys.isDown(keys.UP)) { this.state = this.movePlayer(DIRS.UP, world); }
-		else if(keys.isDown(keys.DOWN)) { this.state = this.movePlayer(DIRS.DOWN, world); }
+		//
+		if(keys.isDown(keys.Q)) {
+			return STATE.SLASH;
+		}
+
+		//
+		if(keys.isDown(keys.RIGHT)) return this.move(DIRS.RIGHT, world);
+		else if(keys.isDown(keys.LEFT)) return this.move(DIRS.LEFT, world);
+		else if(keys.isDown(keys.UP)) return this.move(DIRS.UP, world);
+		else if(keys.isDown(keys.DOWN)) return this.move(DIRS.DOWN, world);
+
+		return this.state;
 	}
 
-	makeStep(secondsPassed)
+	makeStep(secondsPassed, world)
 	{
 		let speed = this.speed * secondsPassed;
 
@@ -38,36 +46,50 @@ export default class Player extends Entity
 		{
 			this.updateCoordinates((SIZE-this.moved), this.dir);
 			this.updateGridCoordinates(this.dir); // TODO only do this when we didnt move at the edge of a room
-			//this.checkCurrentTile(levelHandler); // Check if current tile is ice, entrance to dungeon/shop, ...
-			this.state = IDLE;
+			this.checkTile(world); // Finished moving, check if current tile is shop/dungeon entrance, ice, water, ...
+			this.state = STATE.IDLE;
+		}
+	}
+
+	checkTile(world)
+	{
+		const tile = world.getRoom().getTile(this.xG, this.yG);
+		if("0".includes(tile)) {
+			const link = world.getRoom().getLink();
+			const map = link[1];
+			console.log(`Dungeon/shop entrance at ${link[0]}; map: ${map}`);
+			world.loadMap(map);
 		}
 	}
 
 	update(secondsPassed, world, keys)
 	{
-		if(this.state == IDLE)
-			this.checkInput(keys, world);
-		else {
-			this.makeStep(secondsPassed);
-			this.updateAnimation(secondsPassed)  // Calculate switching animation image
+		if(this.state == STATE.IDLE) {
+			this.frameTimer = 0;
+			this.state = this.checkInput(keys, world);
 		}
 
-		//if(this.state == MOVING)
-
+		if(this.state == STATE.SLASH) {
+			this.frameTimer++;
+			if(this.frameTimer == this.SLASH_COUNT)
+				this.state = STATE.IDLE;
+		}
+		else if(this.state == STATE.MOVING) {
+			this.makeStep(secondsPassed, world);
+			this.updateAnimation(secondsPassed)  // Calculate switching animation image
+		}
 	}
 
-	// A button was pressed. Update direction and check tile.
-	movePlayer(dir, world)
+	move(dir, world)
 	{
-		this.dir = dir;  // Set direction
+		this.dir = dir;
 		const x = this.xG + XDIR[this.dir], y = this.yG + YDIR[this.dir];
-		console.log(`Moving from (${this.yG}, ${this.xG}) to (${y}, ${x})`);
 
 		if(x >= 0 && x < ROOM_W && y >= 0 && y < ROOM_H) {
 			const tile = world.getRoom().getTile(x, y);
-			if(!OVERWORLD_TILES.includes(tile))
-				return IDLE;
-			return MOVING;
+			if(!OVERWORLD_TILES.includes(tile)) //if(OVERWORLD_TILES.indexOf(tile) == -1)
+				return STATE.IDLE;
+			return STATE.MOVING;
 		}
 
 		// Switch room
@@ -82,8 +104,8 @@ export default class Player extends Entity
 
 		this.x = this.xG*SIZE;
 		this.y = this.yG*SIZE;
-		world.switch(dir);
-		return MOVING;
+		world.switchRoom(dir);
+		return STATE.MOVING;
 	}
 
 	resetMovement(state)
@@ -95,10 +117,20 @@ export default class Player extends Entity
 
 	draw(ctx)
 	{
-		ctx.drawImage(
-			this.img,
-			32*this.dir + 32*4*this.animFrame, 0, 32, 32, // Crop image sprite
-			this.x, this.y, SIZE, SIZE // Place image in canvas
-		);
+		if(this.state == STATE.MOVING || this.state == STATE.IDLE) {
+			ctx.drawImage(
+				this.img,
+				32*this.dir + 32*4*this.animFrame, 0, 32, 32, // Crop image sprite
+				this.x, this.y, SIZE, SIZE // Place image in canvas
+			);
+		}
+		else if(this.state == STATE.SLASH) {
+			const fX = [-24, 0, 0,-24], fY = [0, 0, -24, 0];
+			ctx.drawImage(
+				this.img,
+				56*this.dir, 32, 56, 56,
+				this.x + fX[this.dir], this.y + fY[this.dir], 56, 56
+			);
+		}
 	}
 }

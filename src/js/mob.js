@@ -1,7 +1,5 @@
 import Entity from './entity.js';
 
-const IDLE = -1, MOVING = 1, SLIDING = 2, SWITCHING = 3;
-
 class Mob extends Entity
 {
 	constructor(xG, yG, dir, speed, health, anim, sprite)
@@ -39,7 +37,7 @@ class Mob extends Entity
 		const yN = this.yG + YDIR[this.dir];
 		if(xN<0 || xN>=ROOM_W || yN<0 || yN>=ROOM_H)
 			return false;
-		if(OVERWORLD_TILES.includes(tiles[yN][xN]))
+		if(OVERWORLD_TILES.includes(tiles[yN][xN]))	//if(OVERWORLD_TILES.indexOf(tiles[yN][xN]) >= 0)
 			return true;
 		return false;
 	}
@@ -61,7 +59,7 @@ class RedSpike extends Mob
   {
     const SPEED = 72;
     const ANIM = 12;
-    const SPRITE = 2;
+    const SPRITE = 0;
 		const HEALTH = 1;
     super(xG, yG, dir, SPEED, HEALTH, ANIM, SPRITE);
   }
@@ -74,13 +72,78 @@ class BlueSpike extends Mob
   {
     const SPEED = 96;
     const ANIM = 18;
-    const SPRITE = 3;
+    const SPRITE = 1;
 		const HEALTH = 2;
+    super(xG, yG, dir, SPEED, HEALTH, ANIM, SPRITE);
+  }
+}
+
+class Ghost extends Mob
+{
+  constructor(xG, yG, dir)
+  {
+    const SPEED = 48;
+    const ANIM = 6;
+    const SPRITE = 2;
+		const HEALTH = 4;
+    super(xG, yG, dir, SPEED, HEALTH, ANIM, SPRITE);
+  }
+}
+
+class RedDog extends Mob
+{
+  constructor(xG, yG, dir)
+  {
+    const SPEED = 48;
+    const ANIM = 16;
+    const SPRITE = 3;
+		const HEALTH = 6;
+    super(xG, yG, dir, SPEED, HEALTH, ANIM, SPRITE);
+  }
+}
+
+class BlueDog extends Mob
+{
+  constructor(xG, yG, dir)
+  {
+    const SPEED = 36;
+    const ANIM = 24;
+    const SPRITE = 4;
+		const HEALTH = 12;
+    super(xG, yG, dir, SPEED, HEALTH, ANIM, SPRITE);
+  }
+}
+
+class RedCentaur extends Mob
+{
+  constructor(xG, yG, dir)
+  {
+    const SPEED = 64;
+    const ANIM = 16;
+    const SPRITE = 5;
+		const HEALTH = 6;
+    super(xG, yG, dir, SPEED, HEALTH, ANIM, SPRITE);
+  }
+}
+
+class BlueCentaur extends Mob
+{
+  constructor(xG, yG, dir)
+  {
+    const SPEED = 48;
+    const ANIM = 24;
+    const SPRITE = 6;
+		const HEALTH = 18;
     super(xG, yG, dir, SPEED, HEALTH, ANIM, SPRITE);
   }
 }
 
 export {
   BlueSpike,
-  RedSpike
+  RedSpike,
+	Ghost,
+	RedDog,
+	BlueDog,
+	RedCentaur,
+	BlueCentaur
 }

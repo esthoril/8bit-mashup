@@ -1,6 +1,11 @@
 import {
 	RedSpike,
-	BlueSpike
+	BlueSpike,
+	Ghost,
+	RedDog,
+	BlueDog,
+	RedCentaur,
+	BlueCentaur
 } from './mob.js';
 
 const IMG = document.getElementById("tiles_overworld");
@@ -18,6 +23,7 @@ export default class Room
 		this.row = obj["row"];
 		this.col = obj["col"];
 		this.mobs = obj["mobs"];
+		this.links = obj["links"];
  		this.mobSprite = document.getElementById("mobs");
 		this.mobList = new Array();
 
@@ -29,6 +35,7 @@ export default class Room
 	getTile(row, col) { return this.tiles[col][row]; }
 	getRow(row) { return this.row; }
 	getCol(col) { return this.col; }
+	getLink() { return this.links; }
 
 	update(secondsPassed)
 	{
@@ -69,7 +76,7 @@ export default class Room
 	reset()
 	{
 		const t = new Date().getTime();
-		let diff = (t - this.resetTime)*1000; // seconds
+		let diff = (t - this.resetTime)/1000; // seconds
 		console.log(`Time since last visit ${diff}`);
 
 		if(this.mobs != null && diff > 10) {
@@ -85,14 +92,13 @@ export default class Room
 
 		this.mobs.forEach(mob => {
 			switch(mob[3]) { // Mob type
-				case 0:
-					break;
-				case 1:
-					this.mobList.push(new RedSpike(mob[0], mob[1], mob[2]));
-					break;
-				case 2:
-					this.mobList.push(new BlueSpike(mob[0], mob[1], mob[2]));
-					break;
+				case 0: this.mobList.push(new RedSpike(mob[0], mob[1], mob[2])); break;
+				case 1: this.mobList.push(new BlueSpike(mob[0], mob[1], mob[2])); break;
+				case 2: this.mobList.push(new Ghost(mob[0], mob[1], mob[2])); break;
+				case 3: this.mobList.push(new RedDog(mob[0], mob[1], mob[2])); break;
+				case 4: this.mobList.push(new BlueDog(mob[0], mob[1], mob[2])); break;
+				case 5: this.mobList.push(new RedCentaur(mob[0], mob[1], mob[2])); break;
+				case 6:	this.mobList.push(new BlueCentaur(mob[0], mob[1], mob[2]));	break;
 				default:
 					console.log(`Unknown mob type: ${mob[3]}`);
 			}

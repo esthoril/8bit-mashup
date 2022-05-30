@@ -1,6 +1,13 @@
-const OVERWORLD_TILES = ["D",":","0", "i","N","s","p","5","6","7","8","C","M","W"];
+//const OVERWORLD_TILES = ["D",":","0", "k","N","5","6","7","8","C","M","W", "a", "b", "c", "d", "e", "f", "g", "h", "i"];
+const OVERWORLD_TILES = "D:0kN5678CMWabcdefghiC";
 
-const IDLE = -1, MOVING = 1, SLIDING = 2, SWITCHING = 3;
+const STATE = {
+  IDLE: -1,
+  MOVING: 1,
+  SLIDE: 2,
+  SLASH: 3,
+  SWITCH: 6
+}
 
 const SIZE = 32;
 
@@ -35,8 +42,22 @@ const CHARS = {
 	'=': [1,3],
 	'>': [1,4],
 	'B': [1,8], // green bush
+
 	'V': [3,8], // brown bush
 	';': [1,1],
+  'p': [1,7], // green rock
+  's': [3,7], // brown rock
+  'C': [1,9], // green trapdoor
+  // Sand
+  'a': [2,10],
+  'b': [2,11],
+  'c': [2,12],
+  'd': [2,13],
+  'e': [2,14],
+  'f': [2,15],
+  'g': [2,16],
+  'h': [2,17],
+  'i': [2,18],
 	// Brown rock
 	'O': [3,1],
 	'P': [3,2],
@@ -48,12 +69,12 @@ const CHARS = {
 	'X': [0,10],
 	'Y': [0,11],
 	'Z': [0,12],
-	'b': [1,10],
-	'd': [1,12],
+	'm': [1,10],
+	'n': [1,12],
 	// Water
 	'N': [3,0], // dock
 	'4': [0,4], // waterfall
-	'i': [1,17], // stairs
+	'k': [1,17], // stairs
 	'v': [3,10],
 	'w': [3,11],
 	'x': [3,12],
@@ -80,7 +101,7 @@ const CHARS = {
 	'^': [0,16],
 	'_': [0,17],
 	'`': [0,18],
-	'h': [1,16],
-	'j': [1,18],
+	'j': [1,16],
+	'l': [1,18],
 	'3': [0,3] // white statue
 };

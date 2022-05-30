@@ -5,6 +5,8 @@ export default class KeyListener
 	UP = 38;
 	DOWN = 40;
 	SPACE = 32;
+	Q = 81;
+	I = 73;
 
 	constructor()
 	{
@@ -21,7 +23,7 @@ export default class KeyListener
 	down(event) {
 		if (event.keyCode in this.keys)
 		{
-			console.log(`Key pressed ${event.keyCode}`);
+			//console.log(`Key pressed ${event.keyCode}`);
 			event.preventDefault();
 			this.keys[event.keyCode] = true;
 			this.lastPressed = event.keyCode;

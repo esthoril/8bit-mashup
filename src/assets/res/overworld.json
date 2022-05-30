@@ -3,6 +3,7 @@
 		"COMMENT": "Starting room",
 		"row": 5,
 		"col": 8,
+		"links": [[4,2], "dungeon1.json"],
 		"tiles": [
 			"???????::???????",
 			"???????::???????",
@@ -18,18 +19,20 @@
 		]
 	},
 	{
+		"COMMENT": "Level 9",
 		"row": 5,
 		"col": 7,
+		"mobs": [[3,3,1,5], [4,6,3,5], [11,3,2,5], [11,6,3,6], [5,7,2,6]],
 		"tiles": [
 			"????????????????",
 			"????????????????",
 			"?????@::s::::>??",
 			"?@::::::::::::??",
-			"?:::::OPPQ::p:??",
-			"?:s::pSSSS::::>?",
-			"?=::::RSST:ps:::",
-			"???=::::::::s:;<",
-			"????=:p:::::::??",
+			"?:::::OPPQ::::??",
+			"?:s:::SSSS::::>?",
+			"?=::::RSST::s:::",
+			"???=::::::::::;<",
+			"????=:::::::::??",
 			"?????<<<<<<<<<??",
 			"????????????????"
 		]
@@ -37,7 +40,7 @@
 	{
 		"row": 4,
 		"col": 8,
-		"mobs": [[10,4,0,2], [13,2,1,1], [6,6,1,1]],
+		"mobs": [[10,4,0,1], [13,2,1,0], [6,6,1,0]],
 		"tiles": [
 			"????????@::>????",
 			"??@:::V:::::>???",
@@ -56,6 +59,7 @@
 		"COMMENT": "Level 2",
 		"row": 4,
 	  "col": 7,
+		"mobs": [[3,5,1,0], [8,7,0,0]],
 	  "tiles": [
 	    "????????????????",
 	    "???????????:>???",
@@ -67,7 +71,7 @@
 	    "<=:::V::::::::;<",
 	    "??<=:::::;<<<<??",
 	    "????=::;<???????",
-	    "????????????????"
+	    "?????<<?????????"
     ]
   },
 	{
@@ -77,11 +81,11 @@
 			"??@::::::yzzzzzz",
 			"?@:::::::yzzzzzz",
 			"?::XZ::::yzzzzzz",
-			"?::bd::::yzzzzzz",
+			"?::mn::::yzzzzzz",
 			"@::::::::yzzzzzz",
 			":::::::::NNNNNNN",
 			"<::::XZ::yzzzzzz",
-			"?::::bd::yzzzzzz",
+			"?::::mn::yzzzzzz",
 			"?=:::::::yzzzzzz",
 			"??<<<=::;zzzzzzz",
 			"??????<<?zzzzzzz"
@@ -90,16 +94,17 @@
 	{
 		"row": 5,
 		"col": 10,
+		"mobs": [[5,4,2,1], [12,6,3,0]],
 		"tiles": [
 			"zzzzzzzzzzzzzzzz",
-			"zzzz5:V::::p:6zz",
-			"zzz~::::XYZ:::zz",
-			"zz5:p:::b0d:Vpzz",
-			"zz::2sp:::::V:zz",
-			"NNN::::::p::::zz",
-			"zz::2:::::Vs::zz",
-			"zz7p:::V:s:::8zz",
-			"zzzzzz7p::8zzzzz",
+			"zzzz5:V::::e:6zz",
+			"zzz~::::::::::zz",
+			"zz5:e::XYZ::Vezz",
+			"zz:::h:m0n::V:zz",
+			"NNN::::::e::::zz",
+			"zz::::::::Vh::zz",
+			"zz7e:::V:h:::8zz",
+			"zzzzzz7e::8zzzzz",
 			"zzzzzzzzzzzzzzzz",
 			"zzzzzzzzzzzzzzzz"
 		]
@@ -107,6 +112,7 @@
 	{
 		"row": 4,
 		"col": 5,
+		"mobs": [[8,3,0,2], [11,7,3,2]],
 		"tiles": [
 			"IDDDDDDDDDDDDDDI",
 			"IDDDDDDDDDDDDDDI",
@@ -133,9 +139,9 @@
 			"T:::|}z}}}~:::::",
 			"::::::z:::::::::",
 			"PPQ:::N:::::::OP",
-			"SSSPPP4PPPPPiPSS",
-			"SSSSSS4SSSSSiSSS",
-			"SSSSSS4SSSSSiSSS"
+			"SSSPPP4PPPPPkPSS",
+			"SSSSSS4SSSSSkSSS",
+			"SSSSSS4SSSSSkSSS"
 		]
 	},
 	{
@@ -143,8 +149,8 @@
 		"row": 5,
 		"col": 6,
 		"tiles": [
-			"SSSSSS4SSSSSiSSS",
-			"SSSSSS4SSSSSiSSS",
+			"SSSSSS4SSSSSkSSS",
+			"SSSSSS4SSSSSkSSS",
 			"ST:B::z:RS0T:RSS",
 			"S::::8z:::::: RS",
 			"S:::vz~::::::::S",
@@ -159,11 +165,12 @@
 	{
 		"row": 3,
 		"col": 5,
+		"mobs": [[3,2,2,2], [13,4,3,2]],
 		"tiles": [
 			"IIIIIIIIIIIIIIII",
 			"IJDDDDDDDDDDDDHI",
 			"IDDDDDD^_`DDDDDI",
-			"IDDDD3Dh0jD3DDDI",
+			"IDDDD3Dj0lD3DDDI",
 			"IDDDDDDDDDDDDDDI",
 			"IDD1DD1DD1DD1DDI",
 			"IDDDDDDDDDDDDDDI",
@@ -199,13 +206,47 @@
 			"SSSSSSSSSST:RSSS",
 			"ST::RS0ST::::RSS",
 			"S:::::::::XZ::SS",
-			"S:XZ::::::bd::SS",
-			"S:bd:::B::::::RS",
+			"S:XZ::::::mn::SS",
+			"S:mn:::B::::::RS",
 			"S:::::::::::B:::",
 			"SQ::B:XZ::::::OP",
-			"SS::::bd::OPPPSS",
+			"SS::::mn::OPPPSS",
 			"SSPPQ:::OPSSSSSS",
 			"SSSSSPPPSSSSSSSS"
+		]
+	},
+	{
+		"row": 4,
+		"col": 9,
+		"tiles": [
+			"??????????::????",
+			"?@::::::::::::::",
+			":::::XZ:::::::::",
+			"=::::mn:::::::::",
+			"?::::::::vwwwwww",
+			"?::::::::yzzzzzz",
+			"?:::XZ:::yzzzzzz",
+			"?:::mn:::yzzzzzz",
+			"?=:::::::yzzzzzz",
+			"??<::::::yzzzzzz",
+			"???::::::yzzzzzz"
+		]
+	},
+	{
+		"row": 4,
+		"col": 10,
+		"tiles": [
+			"????????????????",
+			":::>????@::::>??",
+			":::::::::::C::??",
+			":::::::::::::;??",
+			"wwwwwwwwwwwwwwww",
+			"zzzzzzzzzzzzzzzz",
+			"zzzzzzzzzzzzzzzz",
+			"zzzzzzzzzzzzzzzz",
+			"zzzzzzzzzzzzzzzz",
+			"zzzzzzzzzzzzzzzz",
+			"zzzzzzzzzzzzzzzz"
 		]
 	}
 ]

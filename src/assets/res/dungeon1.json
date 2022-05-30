@@ -1,0 +1,20 @@
+{
+  "COMMENT": "It's dangerous to go alone!",
+  "text": [
+    112, 80,
+    ["It's dangerous to go", "  alone! Take this."]
+  ],
+  "tiles" : [
+    "CCCCCCCCCCCCCCCC",
+    "CCCCCCCCCCCCCCCC",
+    "CC000000000000CC",
+    "CC000000000000CC",
+    "CC000800B00800CC",
+    "CC000000000000CC",
+    "CC000000000000CC",
+    "CC000300000000CC",
+    "CC000000000000CC",
+    "CCMMMMMM00MMMMCC",
+    "CCCCCCCC00CCCCCC"
+  ]
+}

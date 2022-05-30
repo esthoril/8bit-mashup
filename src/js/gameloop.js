@@ -57,7 +57,7 @@ class Gameloop
 		]);
 
 		this.lhandler = new LevelHandler(data);  // starting level type, id
-		this.lhandler.load(5, 8);
+		this.lhandler.loadRoom(5, 8);
 		this.player = new Player(7, 5, 0);
 
 		sleep(120).then(() => { window.requestAnimationFrame(this.loop); });  // wait 120ms before starting loop

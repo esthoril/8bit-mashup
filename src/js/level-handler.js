@@ -19,23 +19,34 @@ export default class LevelHandler
 		});
 	}
 
-	load(row, col)
+	loadRoom(row, col)
 	{
 		this.current = this.overworld[row][col];
-		console.log(this.current);
 		this.current.reset();
+	}
+
+	loadMap(map)
+	{
+		var xhr = new XMLHttpRequest();
+		xhr.open('GET', `/assets/res/${map}`, true);
+		xhr.responseType = 'text';
+		xhr.onload = function(e)
+		{
+			console.log(JSON.parse(this.responseText));
+		}
+		xhr.send();
 	}
 
 	getRoom() { return this.current; }
 
-	switch(dir)
+	switchRoom(dir)
 	{
 		// Set resetTime for current room
 		this.getRoom().setReset()
 		// Fetch next room
 		const row = this.current.getRow() + YDIR[dir];
 		const col = this.current.getCol() + XDIR[dir];
-		this.load(row, col);
+		this.loadRoom(row, col);
 		console.log(`Switching to room (${row}, ${col})`);
 	}
 
