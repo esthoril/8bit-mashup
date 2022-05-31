@@ -1,33 +1,62 @@
-import LevelHandler from './level-handler.js';
+import Room from './room.js';
 
 export default class WorldHandler
 {
-	constructor(data)
+	constructor(overworld)
   {
-    this.overworld = new LevelHandler(data);
+    this.type = WORLD.OVERWORLD;
+
+    this.overworld = overworld;
+    this.room = null;
+
+    this.map = overworld;
   }
 
-  getCurrent() { return this.overworld; }
+  getType() { return this.type; }
+  getMap() { return this.map; }
+  getRoom() {
+    if(this.type == WORLD.OVERWORLD || this.type == WORLD.DUNGEON)
+      return this.map.getRoom();
+    else if(this.type == WORLD.SHOP)
+      return this.room;
+  }
 
   update()
   {
-    this.overworld.update();
+    this.map.update();
   }
 
   draw(ctx)
   {
-    this.overworld.draw(ctx);
+    this.map.draw(ctx);
   }
 
-  loadMap(map)
+  loadOverworld()
   {
-    var xhr = new XMLHttpRequest();
-    xhr.open('GET', `/assets/res/${map}`, true);
-    xhr.responseType = 'text';
-    xhr.onload = function(e)
-    {
-      console.log(JSON.parse(this.responseText));
-    }
-    xhr.send();
+    this.map = this.overworld;
+    this.type = WORLD.OVERWORLD;
   }
+
+  loadMap(map, player)
+  {
+    let this_ = this;
+    loadJson(map, function(data) {
+      this_.type = WORLD.SHOP;
+      this_.room = new Room(data, DUNGEON_SPRITE, DUNGEON_CHARS);
+      const entrance = data["entrance"];
+      player.setCoordinates(entrance[0], entrance[1]);
+    });
+  }
+}
+
+function loadJson(file, callback)
+{
+	var xhr = new XMLHttpRequest();
+	xhr.open('GET', `/assets/res/${file}`, true);
+	xhr.responseType = 'text';
+	xhr.onload = function(e)
+	{
+		callback(JSON.parse(this.responseText));
+	}
+	 xhr.send();
 }

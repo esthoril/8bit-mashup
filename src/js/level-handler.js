@@ -4,8 +4,6 @@ export default class LevelHandler
 {
 	constructor(data)
 	{
-		const IMG = document.getElementById("tiles_overworld");
-
 		this.overworld = new Array(WORLD_H);
 		for(let i=0; i<WORLD_H; i++) {
   		this.overworld[i] = new Array(WORLD_W);
@@ -14,7 +12,7 @@ export default class LevelHandler
 		data.forEach(obj => {
 			const row = obj["row"];
 			const col = obj["col"];
-			this.overworld[row][col] = new Room(obj, IMG);
+			this.overworld[row][col] = new Room(obj, OVERWORLD_SPRITE, OVERWORLD_CHARS);
 			console.log(`Add room ${row}, ${col}`);
 		});
 	}

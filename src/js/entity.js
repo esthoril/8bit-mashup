@@ -31,6 +31,14 @@ export default class Entity
 		this.yG += YDIR[dir];
 	}
 
+	setCoordinates(x, y)
+	{
+		this.xG = x;
+		this.yG = y;
+		this.x = x*SIZE;
+		this.y = y*SIZE;
+	}
+
 	updateAnimation(secondsPassed)
 	{
 		if(isNaN(this.timePassed)) // TODO fix mob animation?

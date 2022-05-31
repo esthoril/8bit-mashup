@@ -1,5 +1,6 @@
 import AudioPlayer from './audio-player.js';
 import KeyListener from './key-listener.js';
+import LevelHandler from './level-handler.js';
 import WorldHandler from './world-handler.js';
 import Player from './player.js';
 
@@ -20,6 +21,7 @@ class Gameloop
 	{
 		this.audio = null;
 		this.keyListener = null;
+		this.lhandler = null;
 		this.world = null;
 
 		this.canvas = document.getElementById("viewport");
@@ -55,8 +57,9 @@ class Gameloop
 			87   // W
 		]);
 
-		this.world = new WorldHandler(data);  // starting level type, id
-		this.world.getCurrent().loadRoom(5, 8);
+		this.lhandler = new LevelHandler(data);  // starting level type, id
+		this.world = new WorldHandler(this.lhandler);
+		this.lhandler.loadRoom(5, 8);
 		this.player = new Player(7, 5, 0);
 
 		sleep(120).then(() => { window.requestAnimationFrame(this.loop); });  // wait 120ms before starting loop
@@ -81,15 +84,15 @@ class Gameloop
 	// Update objects
 	update(secondsPassed, keys)
 	{
-		this.world.update(secondsPassed);
-		this.player.update(secondsPassed, this.world.getCurrent(), keys);
+		this.world.getRoom().update(secondsPassed);
+		this.player.update(secondsPassed, this.world, keys);
 	}
 
 	// Draw objects
 	draw()
 	{
 		var ctx = this.context;
-		this.world.draw(ctx); // Draw current room
+		this.world.getRoom().draw(ctx);
 		this.player.draw(ctx);
 		this.drawInfo(ctx);
 	}
@@ -101,7 +104,7 @@ class Gameloop
 		ctx.fillRect(XPOS, YPOS, ROOM_W*32, 128);
 
 		const player = this.player;
-		const room = this.world.getCurrent().getRoom();
+		const room = this.world.getRoom();
 
 		ctx.font = '17px Courier';
 		ctx.fillStyle = '#EEE';

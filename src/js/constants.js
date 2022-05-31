@@ -1,6 +1,15 @@
 //const OVERWORLD_TILES = ["D",":","0", "k","N","5","6","7","8","C","M","W", "a", "b", "c", "d", "e", "f", "g", "h", "i"];
 const OVERWORLD_TILES = "D:0kN5678CMWabcdefghiC";
 
+const OVERWORLD_SPRITE = document.getElementById("tiles_overworld");
+const DUNGEON_SPRITE = document.getElementById("tiles_dungeon");
+
+const WORLD = {
+  OVERWORLD: 1,
+  DUNGEON: 2,
+  SHOP: 3
+}
+
 const STATE = {
   IDLE: -1,
   MOVING: 1,
@@ -33,7 +42,7 @@ const DEBUG = false;
 //
 // Overworld sprite tiles
 //
-const CHARS = {
+const OVERWORLD_CHARS = {
 	'0': [0,0],
 	'?': [1,5],
 	'@': [1,6],
@@ -104,4 +113,12 @@ const CHARS = {
 	'j': [1,16],
 	'l': [1,18],
 	'3': [0,3] // white statue
+};
+
+const DUNGEON_CHARS = {
+  '0': [0,0],
+	'S': [1,9],
+ 	'P': [2,9],
+  'f': [0,8], // fire
+  'e': [1,8] // elder man
 };
