@@ -8,11 +8,10 @@ import {
 	BlueCentaur
 } from './mob.js';
 
-const IMG = document.getElementById("tiles_overworld");
 
 export default class Room
 {
-	constructor(obj)
+	constructor(obj, img, charset)
 	{
 		this.resetTime = 0;
 
@@ -20,10 +19,13 @@ export default class Room
 		this.width = this.tiles[0].length; // 16 by default
 		this.height = this.tiles.length; // 11 by default
 
+		this.img = img;
+		this.charset = charset;
+
 		this.row = obj["row"];
 		this.col = obj["col"];
 		this.mobs = obj["mobs"];
-		this.links = obj["links"];
+		this.links = obj["link"];
  		this.mobSprite = document.getElementById("mobs");
 		this.mobList = new Array();
 
@@ -49,10 +51,10 @@ export default class Room
 		for(let i=0; i<this.width; i++) {
 			for(let j=0; j<this.height; j++) {
 				const char = this.tiles[j][i];
-				if(char in CHARS) {
-					const coord = CHARS[char];
+				if(char in this.charset) {
+					const coord = this.charset[char];
 					ctx.drawImage(
-						IMG,
+						this.img,
 						32*coord[1], 32*coord[0],	32, 32, // Crop image sprite
 						i*SIZE, j*SIZE, SIZE, SIZE // Place image in canvas
 					);

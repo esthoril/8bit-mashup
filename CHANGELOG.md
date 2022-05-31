@@ -1,3 +1,6 @@
+31/05
+- switching/loading maps between overworld and dungeons/shops
+
 26/05
 - basic mob movement
 - add room mob reset timer (5 min)

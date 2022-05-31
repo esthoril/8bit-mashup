@@ -13,6 +13,8 @@ export default class Player extends Entity
 		this.img = document.getElementById("link");
 		this.state = STATE.IDLE;
 		this.frameTimer = 0;
+		this.x_ow = null;
+		this.y_ow = null;
 	}
 
 	checkInput(keys, world)
@@ -54,11 +56,13 @@ export default class Player extends Entity
 	checkTile(world)
 	{
 		const tile = world.getRoom().getTile(this.xG, this.yG);
-		if("0".includes(tile)) {
+		if("0".includes(tile) && world.getType() == WORLD.OVERWORLD) {
 			const link = world.getRoom().getLink();
 			const map = link[1];
 			console.log(`Dungeon/shop entrance at ${link[0]}; map: ${map}`);
-			world.loadMap(map);
+			this.x_ow = this.xG; // Remember where we leave the overworld
+			this.y_ow = this.yG;
+			world.loadMap(map, this);
 		}
 	}
 
@@ -92,6 +96,13 @@ export default class Player extends Entity
 			return STATE.MOVING;
 		}
 
+		// Exiting shop or dungeon
+		if(world.getType() == WORLD.SHOP) {
+			this.setCoordinates(this.x_ow, this.y_ow);
+			world.loadOverworld();
+			return STATE.MOVING;
+		}
+
 		// Switch room
 		if(x == -1) // this.xG == 0 && dir == DIRS.LEFT
 			this.xG = ROOM_W;
@@ -104,7 +115,7 @@ export default class Player extends Entity
 
 		this.x = this.xG*SIZE;
 		this.y = this.yG*SIZE;
-		world.switchRoom(dir);
+		world.getMap().switchRoom(dir);
 		return STATE.MOVING;
 	}
 

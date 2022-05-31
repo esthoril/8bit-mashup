@@ -3,7 +3,7 @@
 		"COMMENT": "Starting room",
 		"row": 5,
 		"col": 8,
-		"links": [[4,2], "dungeon1.json"],
+		"link": [[4,2], "dungeon1.json"],
 		"tiles": [
 			"???????::???????",
 			"???????::???????",
@@ -95,6 +95,7 @@
 		"row": 5,
 		"col": 10,
 		"mobs": [[5,4,2,1], [12,6,3,0]],
+		"link": [[8,4], "level1.json"],
 		"tiles": [
 			"zzzzzzzzzzzzzzzz",
 			"zzzz5:V::::e:6zz",
@@ -148,11 +149,13 @@
 		"COMMENT": "River basic shop",
 		"row": 5,
 		"col": 6,
+		"mobs": [[2,4,2,5], [8,5,0,5]],
+		"link": [[10,2], "rivershop.json"],
 		"tiles": [
 			"SSSSSS4SSSSSkSSS",
 			"SSSSSS4SSSSSkSSS",
 			"ST:B::z:RS0T:RSS",
-			"S::::8z:::::: RS",
+			"S::::8z:::::::RS",
 			"S:::vz~::::::::S",
 			"T:::y{:::::::::S",
 			"::::NN:::::::::S",
@@ -201,6 +204,8 @@
 	{
 		"row": 5,
 		"col": 5,
+		"mobs": [[5,4,2,6], [8,3,3,6], [10,7,0,5]],
+		"link": [[6,2], "level7.json"],
 		"tiles": [
 			"SSSSSSSSSSSSSSSS",
 			"SSSSSSSSSST:RSSS",
