@@ -4,7 +4,7 @@ export default class LevelHandler
 {
 	constructor(data)
 	{
-		this.imgOverworld = document.getElementById("tiles_overworld");
+		const IMG = document.getElementById("tiles_overworld");
 
 		this.overworld = new Array(WORLD_H);
 		for(let i=0; i<WORLD_H; i++) {
@@ -14,7 +14,7 @@ export default class LevelHandler
 		data.forEach(obj => {
 			const row = obj["row"];
 			const col = obj["col"];
-			this.overworld[row][col] = new Room(obj);
+			this.overworld[row][col] = new Room(obj, IMG);
 			console.log(`Add room ${row}, ${col}`);
 		});
 	}
@@ -23,18 +23,6 @@ export default class LevelHandler
 	{
 		this.current = this.overworld[row][col];
 		this.current.reset();
-	}
-
-	loadMap(map)
-	{
-		var xhr = new XMLHttpRequest();
-		xhr.open('GET', `/assets/res/${map}`, true);
-		xhr.responseType = 'text';
-		xhr.onload = function(e)
-		{
-			console.log(JSON.parse(this.responseText));
-		}
-		xhr.send();
 	}
 
 	getRoom() { return this.current; }

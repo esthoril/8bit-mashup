@@ -2,7 +2,8 @@ const FILES = ['green.json', 'red.json'];
 let index = 0;
 let color = "";
 
-class ClrObject {
+class ClrObject
+{
 	constructor(){
 			this.color = "";
 	}
