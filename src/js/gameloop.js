@@ -57,10 +57,10 @@ class Gameloop
 			87   // W
 		]);
 
-		this.lhandler = new LevelHandler(data);  // starting level type, id
-		this.world = new WorldHandler(this.lhandler);
-		this.lhandler.loadRoom(5, 8);
+		let overworld = new LevelHandler(data, WORLD.OVERWORLD);  // starting level type, id
+		this.world = new WorldHandler(overworld);
 		this.player = new Player(7, 5, 0);
+		overworld.loadRoom(5, 10);
 
 		sleep(120).then(() => { window.requestAnimationFrame(this.loop); });  // wait 120ms before starting loop
 	}

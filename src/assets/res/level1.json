@@ -1,21 +1,19 @@
-{
-  "COMMENT": "It's dangerous to go alone!",
-  "text": [
-    112, 80,
-    ["It's dangerous to go", "  alone! Take this."]
-  ],
-  "entrance": [8,10],
-  "tiles" : [
-    "SSSSSSSSSSSSSSSS",
-    "SSSSSSSSSSSSSSSS",
-    "SS000000000000SS",
-    "SS000000000000SS",
-    "SS00f000e00f00SS",
-    "SS000000000000SS",
-    "SS000000000000SS",
-    "SS000000000000SS",
-    "SS000000000000SS",
-    "SSPPPPP00PPPPPSS",
-    "SSSSSSS00SSSSSSS"
-  ]
-}
+[
+  {
+    "COMMENT": "Level 1",
+    "entrance": [7,8],
+    "col": 1,
+    "row": 1,
+    "tiles" : [
+      "111111111111111",
+      "111111111111111",
+      "111111111111111",
+      "111111111111111",
+      "111111111111111",
+      "111111111111111",
+      "111111111111111",
+      "111111111111111",
+      "111111111111111"
+    ]
+  }
+]

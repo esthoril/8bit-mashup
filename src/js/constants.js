@@ -1,5 +1,6 @@
 //const OVERWORLD_TILES = ["D",":","0", "k","N","5","6","7","8","C","M","W", "a", "b", "c", "d", "e", "f", "g", "h", "i"];
-const OVERWORLD_TILES = "D:0kN5678CMWabcdefghiC";
+const OVERWORLD_TILES = "D:0kN5678CMWabcdefghiC"; // Tiles player can move on
+const DUNGEON_TILES = "1"; // Tiles player can move on
 
 const OVERWORLD_SPRITE = document.getElementById("tiles_overworld");
 const DUNGEON_SPRITE = document.getElementById("tiles_dungeon");
@@ -117,8 +118,13 @@ const OVERWORLD_CHARS = {
 
 const DUNGEON_CHARS = {
   '0': [0,0],
+  '1': [0,1],
 	'S': [1,9],
  	'P': [2,9],
   'f': [0,8], // fire
   'e': [1,8] // elder man
 };
+
+const DUNGEON_DOORS = {
+
+}

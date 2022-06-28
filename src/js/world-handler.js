@@ -1,4 +1,6 @@
 import Room from './room.js';
+import LevelHandler from './level-handler.js';
+
 
 export default class WorldHandler
 {
@@ -37,10 +39,24 @@ export default class WorldHandler
     this.type = WORLD.OVERWORLD;
   }
 
-  loadMap(map, player)
+  loadDungeon(map, player)
   {
     let this_ = this;
     loadJson(map, function(data) {
+			console.log(`Loading dungeon ${data[0]["COMMENT"]}`)
+      this_.type = WORLD.DUNGEON;
+      this_.map = new LevelHandler(data, WORLD.DUNGEON);
+      const entrance = data[0]["entrance"]; // First room needs entrance field
+      player.setCoordinates(entrance[0], entrance[1]);
+			this_.map.loadRoom(1, 1);
+    });
+  }
+
+  loadShop(map, player)
+  {
+    let this_ = this;
+    loadJson(map, function(data) {
+			console.log(`Loading shop ${data["COMMENT"]}`)
       this_.type = WORLD.SHOP;
       this_.room = new Room(data, DUNGEON_SPRITE, DUNGEON_CHARS);
       const entrance = data["entrance"];
@@ -48,6 +64,7 @@ export default class WorldHandler
     });
   }
 }
+
 
 function loadJson(file, callback)
 {
@@ -58,5 +75,5 @@ function loadJson(file, callback)
 	{
 		callback(JSON.parse(this.responseText));
 	}
-	 xhr.send();
+	xhr.send();
 }

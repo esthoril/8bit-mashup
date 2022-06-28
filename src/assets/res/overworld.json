@@ -97,17 +97,17 @@
 		"mobs": [[5,4,2,1], [12,6,3,0]],
 		"link": [[8,4], "level1.json"],
 		"tiles": [
-			"zzzzzzzzzzzzzzzz",
-			"zzzz5:V::::e:6zz",
-			"zzz~::::::::::zz",
-			"zz5:e::XYZ::Vezz",
-			"zz:::h:m0n::V:zz",
-			"NNN::::::e::::zz",
-			"zz::::::::Vh::zz",
-			"zz7e:::V:h:::8zz",
-			"zzzzzz7e::8zzzzz",
-			"zzzzzzzzzzzzzzzz",
-			"zzzzzzzzzzzzzzzz"
+			"zzzzzzzzzzzzzzzzz",
+			"zzzzz5:V::::e:6zz",
+			"zzzz~::::::::::zz",
+			"zzz5:e::XYZ::Vezz",
+			"zzz:::h:m0n::V:zz",
+			"NNN::::::e:::::zz",
+			"zzz::::::::Vh::zz",
+			"zzz7e:::V:h:::8zz",
+			"zzzzzzz7e::8zzzzz",
+			"zzzzzzzzzzzzzzzzz",
+			"zzzzzzzzzzzzzzzzz"
 		]
 	},
 	{

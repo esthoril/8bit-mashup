@@ -62,7 +62,10 @@ export default class Player extends Entity
 			console.log(`Dungeon/shop entrance at ${link[0]}; map: ${map}`);
 			this.x_ow = this.xG; // Remember where we leave the overworld
 			this.y_ow = this.yG;
-			world.loadMap(map, this);
+			if(map.includes('level'))
+				world.loadDungeon(map, this);
+			else
+				world.loadShop(map, this);
 		}
 	}
 
@@ -91,7 +94,10 @@ export default class Player extends Entity
 
 		if(x >= 0 && x < ROOM_W && y >= 0 && y < ROOM_H) {
 			const tile = world.getRoom().getTile(x, y);
-			if(!OVERWORLD_TILES.includes(tile)) //if(OVERWORLD_TILES.indexOf(tile) == -1)
+			if(
+				(!OVERWORLD_TILES.includes(tile) && world.getType() == WORLD.OVERWORLD) ||
+				(!DUNGEON_TILES.includes(tile) && world.getType() == WORLD.DUNGEON)
+			)
 				return STATE.IDLE;
 			return STATE.MOVING;
 		}

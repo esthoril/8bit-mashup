@@ -1,3 +1,6 @@
+08/06
+- read and draw dungeon maps
+
 31/05
 - switching/loading maps between overworld and dungeons/shops
 

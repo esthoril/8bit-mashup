@@ -1,25 +1,31 @@
 import Room from './room.js';
+import Dungeon from './dungeon.js';
 
 export default class LevelHandler
 {
-	constructor(data)
+	constructor(data, type)
 	{
-		this.overworld = new Array(WORLD_H);
+		console.log(`Loading world ${type}`);
+		this.map = new Array(WORLD_H);
 		for(let i=0; i<WORLD_H; i++) {
-  		this.overworld[i] = new Array(WORLD_W);
+  		this.map[i] = new Array(WORLD_W);
 		}
 
 		data.forEach(obj => {
 			const row = obj["row"];
 			const col = obj["col"];
-			this.overworld[row][col] = new Room(obj, OVERWORLD_SPRITE, OVERWORLD_CHARS);
-			console.log(`Add room ${row}, ${col}`);
+			if(type == WORLD.OVERWORLD)
+				this.map[row][col] = new Room(obj, OVERWORLD_SPRITE, OVERWORLD_CHARS);
+			if(type == WORLD.DUNGEON)
+				this.map[row][col] = new Dungeon(obj, DUNGEON_SPRITE, DUNGEON_CHARS);
+			console.log(`Add room: ${row}, ${col}`);
 		});
 	}
 
 	loadRoom(row, col)
 	{
-		this.current = this.overworld[row][col];
+		console.log(`Loading room: ${row}, ${col}`);
+		this.current = this.map[row][col];
 		this.current.reset();
 	}
 
@@ -33,7 +39,6 @@ export default class LevelHandler
 		const row = this.current.getRow() + YDIR[dir];
 		const col = this.current.getCol() + XDIR[dir];
 		this.loadRoom(row, col);
-		console.log(`Switching to room (${row}, ${col})`);
 	}
 
 	update(secondsPassed)
